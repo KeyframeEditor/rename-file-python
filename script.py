@@ -1,7 +1,7 @@
 import os, re, sys
 
 # Set the directory path where your files are stored
-directory = r'C:/Users/KRAKENDEVDocuments/git/test'
+directory = r'YOUR FOLDER PATH'
 
 # Set the file data type (eg. .png, .jpg, .jpeg)
 dataType = ".txt"
