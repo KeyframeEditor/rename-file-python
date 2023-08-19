@@ -13,4 +13,4 @@ This Python script allows you to efficiently rename Windows files within a speci
    - `directory`: Set the path to the directory containing the files you want to rename.
    - `dataType`: Set the file extension (e.g., ".png", ".jpg") to filter the files you want to rename.
 5. Run the script by executing the following command:
-   python script.py
+   `python script.py`
