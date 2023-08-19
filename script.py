@@ -1,4 +1,4 @@
-import os, re
+import os, re, sys
 
 # Set the directory path where your files are stored
 directory = r'YOUR FOLDER PATH'
@@ -6,6 +6,13 @@ directory = r'YOUR FOLDER PATH'
 # Set the file data type (eg. .png, .jpg, .jpeg)
 dataType = ".png"
 
+# Validate directory
+try:
+    file_list = os.listdir(directory)
+except FileNotFoundError:
+    print("Directory folder not found or not valid!")
+    print("Current directory: " + directory)
+    sys.exit()
 
 # Get the list of file names in the directory
 file_list = os.listdir(directory)
@@ -20,7 +27,6 @@ counter = 0
 
 # Loop through all files in the directory
 for filename in file_list:
-    print(filename)
     # Check if the file is a image file
     if filename.endswith(dataType):
         # Construct the new filename with the counter and file extension
@@ -38,3 +44,4 @@ for filename in file_list:
         os.rename(old_filepath, new_filepath)
         # Increment the counter
         counter += 1
+    print(filename + " -> " + new_filename)
